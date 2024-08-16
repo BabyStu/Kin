@@ -1,0 +1,26 @@
+<div data-ajaxcart class= 'h-full w-px[300] fixed right-0 border border-[black] bg-white'> 
+    <div class='flex justify-center my-1 py-1'>
+        <h1 class="text-3xl font-bold center">KIN</h1>
+        <button id='close-cart' class='right-6 top-4 fixed'>X</button>
+    </div> 
+    <ul class='p-1'>
+        
+        {% for item in cart.items %}
+        {% comment %} <img src="{{ item.featured_image.src | img_url: '10px' }}" 
+            width="10" 
+            height="10"/> {% endcomment %}
+        <li class='my-2'>{{ item.title }} - {{ item.quantity }}</li>
+        {% endfor %}
+        <hr class='my-8 border-t-4 border-gray'>
+        <div class='flex justify-between'>
+            <div>Subtotal</div>
+            <div>{{ cart.total_price | money }}</div>
+        </div>
+    </ul>
+</div>
+
+{% schema %}
+    {
+        "name" : "Ajax Cart"
+    }
+{% endschema %}

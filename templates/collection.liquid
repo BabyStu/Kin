@@ -1,0 +1,19 @@
+<h1 class="text-4xl font-bold text-center text-gray-800 my-8">Collection</h1>  
+<ul class='flex flex-row justify-around'>
+    {% for product in collection.products %}
+        <li>
+            {% form "product", product, data-product-form: true %}
+                <div class=''>
+                    <img src="{{ product.featured_image.src | img_url: '100px' }}" 
+                        alt="{{ product.featured_image.alt }}" 
+                        width="100" 
+                        height="100" />
+                    <h2>{{ product.title }} - {{ product.price | money }}</h2>
+                    <input type="hidden" name='id' value='{{ product.selected_or_first_available_variant.id }}' />
+                    <input type="submit" value="Add to cart" />
+                </div>
+
+            {% endform %}
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  {% section 'header' %}
+  {{ content_for_header }}
+  <script defer src="{{ 'theme.js' | asset_url }}"></script>
+  <link rel="stylesheet" href="{{ 'base.css' | asset_url }}" type="text/css" media="all" />
+
+</head>
+<body class=''>
+  {% comment %} <img src="{{ background.jpg | img_url: '200px'}}"
+    width="100"
+    height="100"/> {% endcomment %}
+
+  <div id='cartContainer' class= 'fixed top-0 right-0 z-50 hidden'>
+    {% section 'ajaxcart' %}
+  </div>
+
+  <main role="main" id="main">
+    <ul class=''>
+      <div class='ml-10 pl-10'>
+    {% section 'frontpage' %}
+    {% render 'bundle' %} 
+      </div>
+    {{ content_for_layout }}
+
+
+    
+    </ul>
+   
+  </main>
+  
+</body>
+</html>
