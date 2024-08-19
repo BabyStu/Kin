@@ -8,19 +8,14 @@
 
 </head>
 <body class=''>
-  {% comment %} <img src="{{ background.jpg | img_url: '200px'}}"
-    width="100"
-    height="100"/> {% endcomment %}
-
   <div id='cartContainer' class= 'fixed top-0 right-0 z-50 hidden'>
     {% section 'ajaxcart' %}
   </div>
 
   <main role="main" id="main">
     <ul class=''>
-      <div class='ml-10 pl-10'>
+      <div class=''>
     {% section 'frontpage' %}
-    {% render 'bundle' %} 
       </div>
     {{ content_for_layout }}
 

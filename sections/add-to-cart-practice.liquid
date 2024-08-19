@@ -1,6 +1,7 @@
 <h1 class="text-4xl font-bold text-center text-gray-800 my-8">Collection</h1>  
 <ul class='flex flex-row justify-around'>
-    {% for product in collection.products %}
+    {% for block in section.blocks %}
+        {% assign product = block.settings.product %}
         <li>
             {% form "product", product, data-product-form: true %}
                 <div class=''>
@@ -12,8 +13,32 @@
                     <input type="hidden" name='id' value='{{ product.selected_or_first_available_variant.id }}' />
                     <input type="submit" value="Add to cart" />
                 </div>
-
             {% endform %}
         </li>
     {% endfor %}
 </ul>
+
+{% schema %}
+{
+    "name" : "Add to Cart Practice",
+    "blocks": [
+        {
+        "type": "product",
+        "name": "Product",
+        "settings": [
+            {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+        }
+        ]
+    }
+    ],
+    "presets": [
+        {
+        "name": "Add to Cart Practice"
+    }
+    ]
+
+}
+{% endschema %}

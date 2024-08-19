@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "example": {
+      "type": "example",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "example"
+  ]
+}

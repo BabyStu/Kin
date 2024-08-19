@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "example": {
+      "type": "example",
+      "settings": {
+      }
+    },
+    "hero_3ARtCq": {
+      "type": "hero",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Background.jpg",
+        "title": "<p>Bliss up for <em>Blisstober<\/em><\/p>",
+        "description": "sldksv kjaslfj kjs;lfjsaklj"
+      }
+    },
+    "add_to_cart_practice_yfbxAc": {
+      "type": "add-to-cart-practice",
+      "blocks": {
+        "product_WMt6Rx": {
+          "type": "product",
+          "settings": {
+            "product": "dream-light"
+          }
+        },
+        "product_njXx3p": {
+          "type": "product",
+          "settings": {
+            "product": "high-rhode"
+          }
+        },
+        "product_NmWKyW": {
+          "type": "product",
+          "settings": {
+            "product": "kin-spritz"
+          }
+        }
+      },
+      "block_order": [
+        "product_WMt6Rx",
+        "product_njXx3p",
+        "product_NmWKyW"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "example",
+    "hero_3ARtCq",
+    "add_to_cart_practice_yfbxAc"
+  ]
+}

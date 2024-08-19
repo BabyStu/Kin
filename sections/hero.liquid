@@ -1,0 +1,42 @@
+<div class="relative">
+    <div class="absolute top-0 left-0 object-cover z-0">
+        {{ section.settings.image | image_url:  width:1500, height:1500 | image_tag }}
+    </div>
+    <div class="absolute columns-1 top-5 left-5 z-10 p-8">
+        <p class='text-9xl'>
+            {{ section.settings.title }}
+        </p> 
+        <p class=''>
+            {{  section.settings.description }}
+        </p>
+        {% render 'bundle' %} 
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Hero",
+        "settings": [
+            {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+            },
+            {
+            "type": "richtext",
+            "id": "title",
+            "label": "Title"
+            },
+            {
+            "type": "text",
+            "id": "description",
+            "label": "Description"
+            }
+        ],
+        "presets":[
+            {
+            "name": "Hero"
+            }
+        ]
+    }
+{% endschema %}
